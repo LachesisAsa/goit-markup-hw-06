@@ -74,6 +74,55 @@
               <use href="./images/icons.svg/symbol-defs.svg#icon-close"></use>
             </svg>
           </button>
+          <form class="form js-speaker-form">
+            <h3 class="title">Оставьте свои данные, мы вам перезвоним</h3>
+            <div class="inputs">
+              <div class="form-field">
+                <label class="form-lable" for="name">Имя</label>
+                <div class="form-input">
+                  <input type="text" name="Имя" id="name" />
+                  <svg class="input-icon" width="12" height="12">
+                    <use href="./images/icons.svg/symbol-defs.svg#icon-person"></use>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="phone" class="form-lable">Телефон</label>
+                <div class="form-input">
+                  <input class="form-input" type="tel" name="Телефон" id="phone" />
+                  <svg class="input-icon" width="13" height="13">
+                    <use href="./images/icons.svg/symbol-defs.svg#icon-phone"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="form-field">
+                <label class="form-lable" for="mail">Почта</label>
+                <div class="form-input">
+                  <input class="form-input" type="email" name="Почта" id="mail" />
+                  <svg class="input-icon" width="15" height="12">
+                    <use href="./images/icons.svg/symbol-defs.svg#icon-email"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="form-field">
+                <label class="form-lable" for="comment">Комментарий</label>
+                <textarea
+                  name="comment"
+                  id="comment"
+                  rows="8"
+                  placeholder="Введите текст"
+                ></textarea>
+              </div>
+            </div>
+            <div class="form-contract">
+              <label class="checkbox-lable"
+                ><input class="checkbox" type="checkbox" name="contract" />Соглашаюсь с рассылкой и
+                принимаю <a href="./index.html" class="link">Условия договора</a></label
+              >
+            </div>
+            <div class="form-button"><button type="submit" class="button">Отправить</button></div>
+          </form>
         </div>
       </div>
       <!-- specifics -->
@@ -139,21 +188,15 @@
           <ul class="occupation-liste list">
             <li class="item">
               <img src="images/box1.jpg" alt="work on the computer" width="370" />
-              <div class="label">
-                <p class="text">Десктопные приложения</p>
-              </div>
+              <p class="text">Десктопные приложения</p>
             </li>
             <li class="item">
               <img src="images/box2.jpg" alt="search the internet" width="370" />
-              <div class="label">
-                <p class="text">Мобильные приложения</p>
-              </div>
+              <p class="text">Мобильные приложения</p>
             </li>
             <li class="item">
               <img src="images/box3.jpg" alt="to be engaged in design" width="370" />
-              <div class="label">
-                <p class="text">Дизайнерские решения</p>
-              </div>
+              <p class="text">Дизайнерские решения</p>
             </li>
           </ul>
         </div>
@@ -399,28 +442,38 @@
           </address>
         </div>
         <!-- Social -->
-        <div class="social">
+        <div class="footer-social">
           <p class="text">присоединяйтесь</p>
-          <a href="" class="social-links">
-            <svg class="links-icon" width="20px" height="20px">
-              <use href="./images/icons.svg/symbol-defs.svg#icon-instagram"></use>
-            </svg>
-          </a>
-          <a href="" class="social-links">
-            <svg class="links-icon" width="20px" height="20px">
-              <use href="./images/icons.svg/symbol-defs.svg#icon-twitter"></use>
-            </svg>
-          </a>
-          <a href="" class="social-links">
-            <svg class="links-icon" width="20px" height="20px">
-              <use href="./images/icons.svg/symbol-defs.svg#icon-facebook"></use>
-            </svg>
-          </a>
-          <a href="" class="social-links">
-            <svg class="links-icon" width="20px" height="20px">
-              <use href="./images/icons.svg/symbol-defs.svg#icon-linkedin"></use>
-            </svg>
-          </a>
+          <ul class="social-liste list">
+            <li class="liste-links">
+              <a href="" class="social-links">
+                <svg class="links-icon" width="20px" height="20px">
+                  <use href="./images/icons.svg/symbol-defs.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="liste-links">
+              <a href="" class="social-links">
+                <svg class="links-icon" width="20px" height="20px">
+                  <use href="./images/icons.svg/symbol-defs.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="liste-links">
+              <a href="" class="social-links">
+                <svg class="links-icon" width="20px" height="20px">
+                  <use href="./images/icons.svg/symbol-defs.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="liste-links">
+              <a href="" class="social-links">
+                <svg class="links-icon" width="20px" height="20px">
+                  <use href="./images/icons.svg/symbol-defs.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
