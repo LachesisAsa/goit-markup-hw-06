@@ -421,14 +421,13 @@ p {
   width: 16px;
   height: 15px;
   background-color: transparent;
-  border: 2px solid var(--secondary-text);
-  border-radius: 2px;
-  transition-property: border, fill, color, background-color;
+
+  transition-property: border, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .check-icon {
-  border: 2px solid #000000;
+  border: 2px solid var(--secondary-text);
   border-radius: 4px;
   fill: var(--accent-color);
   transition-property: fill, background-color;
@@ -436,14 +435,9 @@ p {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox:checked + span {
-  border: none;
-  background-color: #188ce8;
+  background-color: var(--accent-color);
   fill: var(--white-color-text);
-}
-.checkbox:checked + .checkbox-lable .check-icon {
   border: none;
-  background-color: #188ce8;
-  fill: var(--white-color-text);
 }
 
 .form-contract .link {
@@ -465,7 +459,6 @@ p {
   min-width: 200px;
   color: var(--white-color-text);
   background: var(--accent-color);
-  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 16px;
