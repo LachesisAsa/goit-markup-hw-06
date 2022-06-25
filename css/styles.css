@@ -301,13 +301,14 @@ p {
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
   padding: 0;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 .close .icon-close {
   fill: #000000;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal .close:hover .icon-close,
@@ -384,10 +385,13 @@ p {
 .form-field textarea:hover,
 .form-field textarea:focus {
   border: 1px solid var(--secondary-accent-color);
+  outline: none;
+  
 }
 .form-field .form-input:hover .input-icon,
 .form-field .form-input:focus-within .input-icon {
   fill: var(--secondary-accent-color);
+  outline: none;
 }
 .form-field textarea {
   resize: none;
@@ -444,7 +448,17 @@ p {
 .form-contract .link {
   color: var(--accent-color);
   text-decoration-line: underline;
+  transition-property: color, outline;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: 4px;
+   
 
+}
+.form-contract .link:hover,
+.form-contract .link:focus{
+  color: var(--secondary-accent-color);
+outline: 1px solid var(--secondary-accent-color);
 }
 
 
@@ -466,6 +480,7 @@ p {
   transition-property: background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
 }
 .form .button:hover,
 .form .button:focus {
