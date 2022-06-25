@@ -301,7 +301,6 @@ p {
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
   padding: 0;
-  
 }
 
 .close .icon-close {
@@ -339,7 +338,7 @@ p {
   margin-bottom: 20px;
 }
 .form-field .form-input {
-  position: relative; 
+  position: relative;
   transition-property: border, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -377,7 +376,6 @@ p {
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .form-field input:hover,
@@ -386,7 +384,6 @@ p {
 .form-field textarea:focus {
   border: 1px solid var(--secondary-accent-color);
   outline: none;
-  
 }
 .form-field .form-input:hover .input-icon,
 .form-field .form-input:focus-within .input-icon {
@@ -452,19 +449,16 @@ p {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   margin-left: 4px;
-   
-
 }
 .form-contract .link:hover,
-.form-contract .link:focus{
+.form-contract .link:focus {
   color: var(--secondary-accent-color);
-outline: 1px solid var(--secondary-accent-color);
+  outline: 1px solid var(--secondary-accent-color);
 }
-
 
 .form .button {
   display: block;
-  margin:0 auto;
+  margin: 0 auto;
   border-radius: 4px;
   border: none;
   padding: 10px 32px;
@@ -800,7 +794,6 @@ outline: 1px solid var(--secondary-accent-color);
   line-height: 1.14;
   font-weight: 700;
   text-transform: uppercase;
-
 }
 .footer-form .e-mail-input {
   width: 358px;
@@ -816,7 +809,7 @@ outline: 1px solid var(--secondary-accent-color);
 .e-mail-input::placeholder {
   font-size: 16px;
   line-height: 1.25;
-  color: olor: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-button {
