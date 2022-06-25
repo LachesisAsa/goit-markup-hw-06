@@ -312,7 +312,7 @@ p {
 
 .modal .close:hover .icon-close,
 .modal .close:focus .icon-close {
-  fill: #2196f3;
+  fill: var(--secondary-accent-color);
 }
 .form {
   margin-left: auto;
@@ -338,11 +338,8 @@ p {
   margin-bottom: 20px;
 }
 .form-field .form-input {
-  position: relative;
-  width: 100%;
-  /* border-radius: 4px;
-  border: 1px solid rgba(33, 33, 33, 0.2); */
-  transition-property: border, color, fill;
+  position: relative; 
+  transition-property: border, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -350,10 +347,9 @@ p {
   padding: 11px 12px 11px 42px;
   margin: 0;
   width: 100%;
-  font: inherit;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  transition-property: border, color, fill;
+  transition-property: border, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -377,17 +373,21 @@ p {
   top: 50%;
   transform: translateY(-50%);
   fill: #212121;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .form-field input:hover,
-.form-field input:focus,
+.form-field input:focus-within,
 .form-field textarea:hover,
 .form-field textarea:focus {
-  border: 1px solid #2196f3;
+  border: 1px solid var(--secondary-accent-color);
 }
 .form-field .form-input:hover .input-icon,
-.form-field .form-input:focus .input-icon {
-  fill: var(--accent-color);
+.form-field .form-input:focus-within .input-icon {
+  fill: var(--secondary-accent-color);
 }
 .form-field textarea {
   resize: none;
@@ -403,6 +403,9 @@ p {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.form-contract {
+  margin-bottom: 30px;
+}
 
 .checkbox-lable {
   display: flex;
@@ -410,8 +413,7 @@ p {
   align-items: center;
   font-size: 14px;
   line-height: 1.71;
-  margin-bottom: 30px;
-  color: var(--primary-text-color);
+  color: var(--title-text-color);
 }
 .checkbox-lable span {
   display: flex;
@@ -420,9 +422,9 @@ p {
   margin-right: 7px;
   width: 16px;
   height: 15px;
-  background-color: transparent;
-
-  transition-property: border, background-color;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 4px;
+  transition-property: border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -430,29 +432,29 @@ p {
   border: 2px solid var(--secondary-text);
   border-radius: 4px;
   fill: var(--accent-color);
-  transition-property: fill, background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox:checked + span {
   background-color: var(--accent-color);
-  fill: var(--white-color-text);
+  transition-property: background-color, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
+}
+.checkbox:checked + span:focus{
+
 }
 
 .form-contract .link {
-  color: #2196f3;
+  color: var(--accent-color);
   text-decoration-line: underline;
+
 }
 
-.form .form-button {
+
+.form .button {
+  display: inherit;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
-}
-
-.form-button .button {
-  display: inline-block;
   border-radius: 4px;
   border: none;
   padding: 10px 32px;
@@ -469,9 +471,9 @@ p {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-button .button:hover,
-.form-button .button:focus {
-  background: #188ce8;
+.form .button:hover,
+.form .button:focus {
+  background: var(--secondary-accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -779,7 +781,7 @@ p {
 }
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> form footer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 .footer-form {
-  margin-left: 93px;
+  margin-left: auto;
 }
 .footer-form .text {
   margin-bottom: 20px;
@@ -787,7 +789,7 @@ p {
   line-height: 1.14;
   font-weight: 700;
   text-transform: uppercase;
-  /* text-align: left; */
+
 }
 .footer-form .e-mail-input {
   width: 358px;
@@ -798,11 +800,12 @@ p {
   background: var(--footer-hero-bg-color);
   padding: 15px 16px;
   margin-right: 12px;
+  color: var(--white-color-text);
 }
 .e-mail-input::placeholder {
   font-size: 16px;
   line-height: 1.25;
-  color: var(--footer-contacts-text);
+  color: olor: rgba(255, 255, 255, 0.6);
 }
 
 .footer-button {
